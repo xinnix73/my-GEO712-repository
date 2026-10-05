@@ -56,18 +56,16 @@ $$
 
 # A Chunk of Code
 
-The following R code creates a small table of the SAR missions I am
-interested in, with their approximate radar wavelengths:
+The following R code reads this `.Rmd` file and renders it as a PDF when
+run interactively in RStudio.
 
 ``` r
-sar <- data.frame(
-  mission = c("Sentinel-1", "NISAR", "BIOMASS"),
-  band = c("C", "L", "P"),
-  wavelength_cm = c(5.6, 24, 69)
-)
-sar
-#>      mission band wavelength_cm
-#> 1 Sentinel-1    C           5.6
-#> 2      NISAR    L          24.0
-#> 3    BIOMASS    P          69.0
+rmd_file <- "Xin-Activity-1.Rmd"
+
+if (interactive()) {
+  rmarkdown::render(
+    input = rmd_file,
+    output_format = "pdf_document"
+  )
+}
 ```
