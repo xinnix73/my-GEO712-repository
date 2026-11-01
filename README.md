@@ -76,6 +76,8 @@ The project keeps files organized by purpose:
 
 - `data/` contains the model-performance data table
   `model_performance.csv`.
+- `R/` contains the R script used to generate the model-performance
+  figure.
 - `figures/` contains figures generated from the project data.
 - `easter-egg/` contains supplementary outputs from an earlier exercise.
 - `README.Rmd` is the source document for this README, while `README.md`
