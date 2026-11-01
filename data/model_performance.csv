@@ -1,0 +1,7 @@
+model,feature1_r2,feature2_r2,feature3_r2,annotation
+S7-C1B,0.87,,,D08 high-precision stem-count baseline
+S7-C2 M5,0.85,0.90,0.75,G08 three-label main baseline
+S7-B B2_FLAT67 (G08),0.83,0.91,0.74,Three-label comparison
+S7-B B2_FLAT67 (D08),0.84,,,Same-label stem-count comparison
+S7-D3,0.82,,,Missingness-aware robust model
+S7-A COH19 (G08),0.82,0.88,0.73,Coherence-statistics comparison
