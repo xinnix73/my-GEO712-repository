@@ -64,3 +64,33 @@ if (interactive()) {
   )
 }
 ```
+
+# Project Assets
+
+The project keeps files organized by purpose:
+
+- `data/` contains the model-performance data table
+  `model_performance.csv`.
+- `figures/` contains figures generated from the project data.
+- `easter-egg/` contains supplementary outputs from an earlier exercise.
+- `README.Rmd` is the source document for this README, while `README.md` is
+  the knitted GitHub document.
+- `renv.lock` records the package versions needed to reproduce the project.
+
+The following model-performance table is read from the project data folder
+with `{here}`, so the file path remains stable when the project is opened from
+another working directory.
+
+```{r research-interest-data}
+model_performance <- read.csv(
+  here::here("data", "model_performance.csv"),
+  stringsAsFactors = FALSE
+)
+
+knitr::kable(model_performance)
+```
+
+The figure below compares the available R-squared values for each model and
+feature. Blank values indicate that a feature was not reported for that model.
+
+![Model performance comparison](figures/model_performance_r2.png)

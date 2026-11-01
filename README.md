@@ -69,3 +69,48 @@ if (interactive()) {
   )
 }
 ```
+
+# Project Assets
+
+The project keeps files organized by purpose:
+
+- `data/` contains the model-performance data table
+  `model_performance.csv`.
+- `figures/` contains figures generated from the project data.
+- `easter-egg/` contains supplementary outputs from an earlier exercise.
+- `README.Rmd` is the source document for this README, while `README.md`
+  is the knitted GitHub document.
+- `renv.lock` records the package versions needed to reproduce the
+  project.
+
+The following model-performance table is read from the project data
+folder with `{here}`, so the file path remains stable when the project
+is opened from another working directory.
+
+``` r
+model_performance <- read.csv(
+  here::here("data", "model_performance.csv"),
+  stringsAsFactors = FALSE
+)
+
+knitr::kable(model_performance)
+```
+
+| model | feature1_r2 | feature2_r2 | feature3_r2 | annotation |
+|:---|---:|---:|---:|:---|
+| S7-C1B | 0.87 | NA | NA | D08 high-precision stem-count baseline |
+| S7-C2 M5 | 0.85 | 0.90 | 0.75 | G08 three-label main baseline |
+| S7-B B2_FLAT67 (G08) | 0.83 | 0.91 | 0.74 | Three-label comparison |
+| S7-B B2_FLAT67 (D08) | 0.84 | NA | NA | Same-label stem-count comparison |
+| S7-D3 | 0.82 | NA | NA | Missingness-aware robust model |
+| S7-A COH19 (G08) | 0.82 | 0.88 | 0.73 | Coherence-statistics comparison |
+
+The figure below compares the available R-squared values for each model
+and feature. Blank values indicate that a feature was not reported for
+that model.
+
+<figure>
+<img src="figures/model_performance_r2.png"
+alt="Model performance comparison" />
+<figcaption aria-hidden="true">Model performance comparison</figcaption>
+</figure>
