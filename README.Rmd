@@ -22,6 +22,9 @@ This repository contains my coursework for **GEO712**. It is set up as a reprodu
 
 My main research interest is **detecting and characterizing forest structure using multi-source Synthetic Aperture Radar (SAR) data**. I am particularly interested in integrating observations from *Sentinel-1 C-band, NISAR L-band, and BIOMASS P-band* to investigate how radar signals at different wavelengths respond to forest structural characteristics. Because these wavelengths interact with different parts of the forest canopy and woody components, combining them may provide complementary information for detecting and estimating forest structure. My research aims to explore the potential of multi-frequency SAR observations for more accurate and robust forest monitoring across different forest conditions.
 
+The complete data description for this project is available in
+[`DATA_DESCRIPTION.md`](DATA_DESCRIPTION.md).
+
 # Activity: Project Data Analysis
 
 This activity describes the two data sources planned for my forest-structure

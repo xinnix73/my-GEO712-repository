@@ -26,6 +26,9 @@ My research aims to explore the potential of multi-frequency SAR
 observations for more accurate and robust forest monitoring across
 different forest conditions.
 
+The complete data description for this project is available in
+[`DATA_DESCRIPTION.md`](DATA_DESCRIPTION.md).
+
 # Activity: Project Data Analysis
 
 This activity describes the two data sources planned for my
